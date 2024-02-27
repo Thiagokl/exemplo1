@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import List from './components/List';
 
 function App() {
+  const users = [
+    {
+      id: 0,
+      name: 'Siri'
+    },
+    {
+      id: 1,
+      name: 'Alexa'
+    },
+    {
+      id: 2,
+      name: 'Google Assistente'
+    },
+    {
+      id: 3,
+      name: 'Bixby'
+    }
+  ];
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <List itens={users} />
     </div>
   );
 }
